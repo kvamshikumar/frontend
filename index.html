@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            background-color: rgba(33, 29, 29, 0.829);
+            position: fixed;
+        }
+        .navbar >a{
+            display: flex;
+            text-decoration: none;
+            font-size: 2rem;
+            color: white;
+            padding: 8px;
+            
+        }
+        .navbar >a:hover{
+        background-color: rgb(39, 67, 91);
+        }
+        section.pf{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-style: solid;
+            border-width: 2px;
+            background-color: rgb(50, 66, 97);
+        }
+        section > div{
+            border-style: solid;
+            border-width: 2px;
+            max-width: 1200px;
+            height: 500px;
+            justify-content: center;
+            padding: 7px;
+            margin: 18px;
+            margin-top: 10px;
+        }
+        .home{
+            margin-top: 60px;
+            display: flex;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTZIocB0RMuCvcrsYlv07VAZ7iemFzTo7yA&usqp=CAU');
+            background-color: darkslategray;
+        }
+        div.home-content{
+            font-size: 3rem;
+            color: aliceblue;
+            margin-top: 29px;
+        }
+        
+        div.about{
+            font-size: 2.3rem;
+            background-color: darkcyan  ;
+        }
+     
+        div.contact{
+            font-size: 2.3rem;
+            background-color: darkcyan  ;
+        }
+       
+        .gallery{
+            font-size: 2.3rem;
+            background-color: darkcyan  ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: black;
+
+        }
+        span>a>img{
+            width: 40px;
+            height: 40px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+          }
+  img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#gallery">Gallery</a>
+    </div>
+    <section class="pf">
+        <div class="home" id="home">
+             <div class="home-content">
+                  <div class="text-1">Hello, my name is</div>
+                  <div class="text-2">K Vamshi Kumar</div>
+                  <a style="text-decoration: none;color:black;" href="https://github.com/vamshikumar20/">Hire me</a>
+                  <div>Welcome to MyPortfolio</div>
+                </div>
+          </div>
+        <div class="about" id="about">
+              <!-- about section start -->
+             <h1 style="text-align: center;">About</h1>
+                    <div class="text">I'm Vamshi Kumar</div>
+                 <p>A motivated self-starter and desire to overcome all challenges I confront with thorough dedication and passion towards my responsibility. Looking forward to work in a company which provides me opportunities to expose all my abilities and a career that is most innovative, interesting also enhancing my skills and strengths by fulfilling goals of the company</p>
+                    <a href="#">Download CV</a>
+        </div>
+        <div class="contact" id="contact">
+            <h1 style="text-align: center;">Contact me</h1>
+            <form action="">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="First Name"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Last Name"><br>
+                <label for="femail">Email:</label><br>
+                <input type="email"  name="femail" value="Email">
+                <input type="submit" value="Send Message">
+              </form> <br>
+              <span><a href="https://github.com/kvamshikumar"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="noimg"></a></span>
+            <span> <a href=""><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201912/linked-in-2668692_1280_0.png?size=690:388" alt="">
+             </a> </span>
+            </div>
+      <section>
+        <h1 style="text-align: center;font-size:3.3rem;">Gallery</h1>
+        <span class="gallery" id="gallery">
+            
+            <img src="https://source.unsplash.com/VWcPlbHglYc/640x416" alt="" />
+            <img src="https://media.istockphoto.com/id/1362996689/photo/chocolate-splashed-on-transparent-background-clipping-path.jpg?b=1&s=170667a&w=0&k=20&c=MPRdBa3qccn0WtMq7jL79WntZtnwf-GqxnmRjt6dYus=" alt="">
+            <img src="https://media.istockphoto.com/id/157382169/photo/red-flow.jpg?s=612x612&w=0&k=20&c=8Tz8xN1ciCTDwLjYVxWJWC7IH6p9KVsgavgRsW8TrBc=" alt="">
+            <img src="https://media.istockphoto.com/id/925440650/photo/underwater-bubbles.jpg?s=612x612&w=0&k=20&c=k_iJkW8e2l7UdUvxRviAFanteIKgsOUYDkWtBrl8nzs=" alt="">
+            <img src="https://media.istockphoto.com/id/1415844380/photo/water-leaf-splash-wave-isolated-on-the-white-background.jpg?b=1&s=170667a&w=0&k=20&c=8zQWSsssMT-xrkj8MNcUPGLs1suOlMXi8YgyZorUpjg=" alt="">
+            <img src="https://media.istockphoto.com/id/1368264124/photo/extreme-close-up-of-thrashing-emerald-ocean-waves.jpg?b=1&s=170667a&w=0&k=20&c=qha_PaU54cu9QCu1UTlORP4-sW0MqLGERkdFKmC06lI=" alt="">
+            <img src="https://source.unsplash.com/VWcPlbHglYc/640x416" alt="" />
+            <img src="https://media.istockphoto.com/id/1362996689/photo/chocolate-splashed-on-transparent-background-clipping-path.jpg?b=1&s=170667a&w=0&k=20&c=MPRdBa3qccn0WtMq7jL79WntZtnwf-GqxnmRjt6dYus=" alt="">
+            <img src="https://media.istockphoto.com/id/157382169/photo/red-flow.jpg?s=612x612&w=0&k=20&c=8Tz8xN1ciCTDwLjYVxWJWC7IH6p9KVsgavgRsW8TrBc=" alt="">
+            <img src="https://media.istockphoto.com/id/925440650/photo/underwater-bubbles.jpg?s=612x612&w=0&k=20&c=k_iJkW8e2l7UdUvxRviAFanteIKgsOUYDkWtBrl8nzs=" alt="">
+            <img src="https://media.istockphoto.com/id/1415844380/photo/water-leaf-splash-wave-isolated-on-the-white-background.jpg?b=1&s=170667a&w=0&k=20&c=8zQWSsssMT-xrkj8MNcUPGLs1suOlMXi8YgyZorUpjg=" alt="">
+            <img src="https://media.istockphoto.com/id/1368264124/photo/extreme-close-up-of-thrashing-emerald-ocean-waves.jpg?b=1&s=170667a&w=0&k=20&c=qha_PaU54cu9QCu1UTlORP4-sW0MqLGERkdFKmC06lI=" alt="">
+            
+        </span>
+    </section>
+    </section>
+    <footer style="font-size: 1.5rem;margin:10px">Created By Vamshi Kumar</footer>
+</body>
+</html>
