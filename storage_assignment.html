@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Assignment</title>
+    <style>
+        button{
+            font-size: medium;
+            cursor: pointer;
+        }
+        section{
+            margin-top: 32vh;
+            margin-left: 38vw;
+            width: 60%;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <button>Incrementer</button>
+    <ul></ul>
+    <button id="reset">reset</button>
+</section>
+    <script>
+        h=document.querySelector('ul');
+        localele=document.createElement('li')
+        sessionele=document.createElement('li');
+        l1=document.createElement('span');
+        l2=document.createElement('span');
+        l1.textContent="LocalStorageValue: ";
+        l2.textContent=0;
+        s1=document.createElement('span');
+        s2=document.createElement('span');
+        s1.textContent="SessionStorageValue: ";
+        s2.textContent=0;
+        localele.appendChild(l1);
+        localele.appendChild(l2);
+        sessionele.appendChild(s1);
+        sessionele.appendChild(s2);
+        h.appendChild(localele);
+        h.appendChild(sessionele)
+        if(localStorage.getItem("Inc")){
+             //do nothing
+             console.log(localStorage.getItem("Inc"))
+        }
+        else{
+        localStorage.setItem("Inc",0); 
+        }
+        if(sessionStorage.getItem("Inc")){
+//        sessionStorage.setItem("Inc",0);
+          console.log(sessionStorage.getItem("Inc"))
+        }
+        else{
+            sessionStorage.setItem("Inc",0)
+            console.log("hi")
+        }
+        btn=document.querySelector('button');
+        btn.addEventListener("click",()=>{
+            x=localStorage.getItem("Inc");
+            y=sessionStorage.getItem("Inc");
+            localStorage.setItem("Inc",parseInt(x)+1);
+            sessionStorage.setItem("Inc",parseInt(y)+1);
+            l2.textContent=localStorage.getItem("Inc");
+            s2.textContent=sessionStorage.getItem("Inc");
+        })
+        
+        l2.textContent=localStorage.getItem("Inc");
+        s2.textContent=sessionStorage.getItem("Inc");
+        r=document.getElementById("reset");
+        r.addEventListener('click',()=>{
+            l2.textContent=0;
+            s2.textContent=0;
+            localStorage.setItem("Inc",0);
+            sessionStorage.setItem("Inc",0);
+        })
+    </script>
+</body>
+</html>
