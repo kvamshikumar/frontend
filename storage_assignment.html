@@ -44,11 +44,19 @@
         h.appendChild(sessionele)
         if(localStorage.getItem("Inc")){
              //do nothing
+             console.log(localStorage.getItem("Inc"))
         }
         else{
         localStorage.setItem("Inc",0); 
         }
-        sessionStorage.setItem("Inc",0);
+        if(sessionStorage.getItem("Inc")){
+//        sessionStorage.setItem("Inc",0);
+          console.log(sessionStorage.getItem("Inc"))
+        }
+        else{
+            sessionStorage.setItem("Inc",0)
+            console.log("hi")
+        }
         btn=document.querySelector('button');
         btn.addEventListener("click",()=>{
             x=localStorage.getItem("Inc");
@@ -58,6 +66,9 @@
             l2.textContent=localStorage.getItem("Inc");
             s2.textContent=sessionStorage.getItem("Inc");
         })
+        
+        l2.textContent=localStorage.getItem("Inc");
+        s2.textContent=sessionStorage.getItem("Inc");
         r=document.getElementById("reset");
         r.addEventListener('click',()=>{
             l2.textContent=0;
