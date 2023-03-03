@@ -42,7 +42,12 @@
         sessionele.appendChild(s2);
         h.appendChild(localele);
         h.appendChild(sessionele)
-        localStorage.setItem("Inc",0);
+        if(localStorage.getItem("Inc")){
+             //do nothing
+        }
+        else{
+        localStorage.setItem("Inc",0); 
+        }
         sessionStorage.setItem("Inc",0);
         btn=document.querySelector('button');
         btn.addEventListener("click",()=>{
